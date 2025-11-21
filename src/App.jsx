@@ -543,21 +543,13 @@ function Order({ loading, items }) {
       "Please confirm availability and reply to the customer.",
     ];
     const body = bodyLines.join("\n");
-    const gmailParams = new URLSearchParams({
-      view: "cm",
-      fs: "1",
-      to: ORDER_EMAIL,
-      su: subject,
-      body,
-    });
-    const gmailUrl = `https://mail.google.com/mail/?${gmailParams.toString()}`;
     const mailtoUrl = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open Gmail compose in the same tab for better mobile compatibility
-    window.location.href = gmailUrl;
+    // Open email app in the same tab for mobile compatibility
+    window.location.href = mailtoUrl;
 
     setSubmitting(false);
-    setInfo("Redirecting to Gmail compose. Please review the email and press Send to complete your order.");
+    setInfo("Opening your email app. Please review the email and press Send to complete your order.");
     setName("");
     setPhone("");
     setLocation("");
