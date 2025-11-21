@@ -556,7 +556,7 @@ function Order({ loading, items }) {
     const openEmailClient = () => {
       let opened = false;
       try {
-        const win = window.open(gmailUrl, "_blank");
+        const win = window.open(gmailUrl);
         if (win) {
           opened = true;
         } else {
