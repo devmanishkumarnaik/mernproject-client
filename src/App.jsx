@@ -339,7 +339,7 @@ Sent from Rushikulya Marketplace Contact Form
                 <div className="contact-icon">📧</div>
                 <div className="contact-details">
                   <div className="contact-label">Email</div>
-                  <a href="mailto:drpatrospvltd@gmail.com" className="contact-value">drpatrospvtltd@gmail.com</a>
+                  <a href="demo@gmail.com" className="contact-value">drpatrospvtltd@gmail.com</a>
                 </div>
               </div>
               <div className="contact-info-item">
@@ -553,30 +553,11 @@ function Order({ loading, items }) {
     const gmailUrl = `https://mail.google.com/mail/?${gmailParams.toString()}`;
     const mailtoUrl = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    const openEmailClient = () => {
-      let opened = false;
-      try {
-        const win = window.open(gmailUrl);
-        if (win) {
-          opened = true;
-        } else {
-          window.location.href = gmailUrl;
-          opened = true;
-        }
-      } catch (err) {
-        console.error("Failed to open Gmail compose:", err);
-      }
-      if (!opened) {
-        window.location.href = mailtoUrl;
-      }
-    };
-
-    if (typeof window !== "undefined") {
-      openEmailClient();
-    }
+    // Open Gmail compose in the same tab for better mobile compatibility
+    window.location.href = gmailUrl;
 
     setSubmitting(false);
-    setInfo("Gmail compose has opened in a new tab. Please review the email and press Send to complete your order.");
+    setInfo("Redirecting to Gmail compose. Please review the email and press Send to complete your order.");
     setName("");
     setPhone("");
     setLocation("");
