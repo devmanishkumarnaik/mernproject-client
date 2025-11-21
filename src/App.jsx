@@ -339,7 +339,7 @@ Sent from Rushikulya Marketplace Contact Form
                 <div className="contact-icon">📧</div>
                 <div className="contact-details">
                   <div className="contact-label">Email</div>
-                  <a href="demo@gmail.com" className="contact-value">drpatrospvtltd@gmail.com</a>
+                  <a href="mailto:drpatrospvltd@gmail.com" className="contact-value">drpatrospvtltd@gmail.com</a>
                 </div>
               </div>
               <div className="contact-info-item">
