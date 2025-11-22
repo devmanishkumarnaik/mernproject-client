@@ -29,9 +29,9 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.container { width: 100%; max-width: none; margin: 0; padding: 0; overflow-x: hidden; }
+.container { width: 100%; max-width: none; margin: 0; padding: 0; padding-top: 72px; overflow-x: hidden; }
 
-.header { display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: var(--panel); border-bottom: 1px solid var(--border); z-index: 1000; padding: 12px 40px; flex-wrap: nowrap; }
+.header { display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; background: var(--panel); border-bottom: 1px solid var(--border); z-index: 1000; padding: 12px 40px; flex-wrap: nowrap; }
 .brand { font-size: 28px; font-weight: 800; letter-spacing: 0.4px; display: flex; align-items: center; gap: 12px; }
 .brand-logo { height: 48px; width: 48px; object-fit: contain; }
 .header .brand { color: #16a34a; }
